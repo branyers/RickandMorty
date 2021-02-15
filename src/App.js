@@ -1,24 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import ResidentInfo from './components/ResidentInfo';
+import SearchBox from './components/SearchBox';
+import LocationContainer from './components/LocationContainer';
+import React,{useState, useEffect} from 'react'
 
 function App() {
+
+  const [ id, setId ] = useState();
+  const [ searchValue, setSearchValue] = useState();
+
+  //Llamado random
+  useEffect(() => {
+    const stringThis = Math.floor(Math.random() * 108)
+    stringThis.toString()
+      setId(stringThis)
+  },[])
+
+  //Handlers para el SearchBox, así le asignamos el id a la URL
+  const settingSearchValue = (e) => {
+    e.preventDefault()
+    setSearchValue(e.target.elements[0].value)
+  }
+
+  //Side Effect del ID
+  useEffect(() => {
+      setId(searchValue)
+  }, [searchValue])
+
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <SearchBox Onsubmit={settingSearchValue}/>
+    <LocationContainer id={id}/>
+    </>
   );
 }
 
