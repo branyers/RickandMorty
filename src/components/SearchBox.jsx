@@ -2,6 +2,8 @@ import React from 'react'
 import {FaSearch}  from 'react-icons/fa';
 const SearchBox = ({Onsubmit}) => {
 
+    
+
     return (
         <form onSubmit={Onsubmit}>
         

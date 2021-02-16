@@ -1,11 +1,12 @@
 import ResidentContainer from "./ResidentContainer"
 import LocationInfo from "./LocationInfo"
-const AuxComponet = ({ residents, hasError, name, dimension, type }) => {
+const AuxComponet = ({ residents, name, dimension, type }) => {
 
     return (
         <>
-            <ResidentContainer Residents={residents} />
             <LocationInfo name={name} dimesion={dimension} type={type} />
+            <ResidentContainer Residents={residents} />
+            
         </>
     )
 

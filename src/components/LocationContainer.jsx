@@ -21,7 +21,6 @@ const LocationContainer = ({ id }) => {
             setType(data.type)
             setDimension(data.dimension)
             getUrlResidents(data)
-            console.log(residents)
 
         }
 
@@ -34,6 +33,7 @@ const LocationContainer = ({ id }) => {
 
     }
 
+    
 
 
     

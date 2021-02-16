@@ -80,3 +80,12 @@ h5 {
 #searchQuerySubmit:hover {
   cursor: pointer;
 }
+
+.info-container{
+  /* border: solid 2px red;
+    width: 150px;
+    padding: 10px;
+    margin-left: 20px;
+    display: inline-block;
+    display: flex; */
+}

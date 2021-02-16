@@ -3,9 +3,9 @@ import React from 'react'
 const LocationInfo = ({name,dimesion,type}) => {
     return (
         <div>
-            <p>{name}</p>
+            {/* <p>{name}</p>
             <p>{dimesion}</p>
-            <p>{type}</p>
+            <p>{type}</p> */}
         </div>
     )
 }

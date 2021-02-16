@@ -8,7 +8,6 @@ const ResidentContainer = ({Residents}) => {
     
     const resultResidents = (data) => {
         const Allresidents = data.map((residents) => {
-            console.log(residents)
             return <ResidentInfo key={residents.id} residents={residents} />   
         })
         setMagigComponent(Allresidents)
@@ -22,7 +21,6 @@ const ResidentContainer = ({Residents}) => {
             SaverResidents.push(
 
                 axios(link).then((result) => {
-                    console.log(result.data)
                      return result.data
 
                 })
@@ -45,7 +43,7 @@ const ResidentContainer = ({Residents}) => {
 
 
     return (
-        <div>
+        <div className="row example">
 
             {magigComponent}
 

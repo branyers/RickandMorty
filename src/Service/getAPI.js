@@ -6,3 +6,5 @@ return data
 }
 
 export default getAPI
+
+

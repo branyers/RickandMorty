@@ -7,25 +7,26 @@ import React,{useState, useEffect} from 'react'
 function App() {
 
   const [ id, setId ] = useState();
-  const [ searchValue, setSearchValue] = useState();
+  const [ value, setValue] = useState();
 
-  //Llamado random
+  
   useEffect(() => {
-    const stringThis = Math.floor(Math.random() * 108)
-    stringThis.toString()
-      setId(stringThis)
+    const RandomId = Math.floor(Math.random() * 108)
+    RandomId.toString()
+      setId(RandomId)
   },[])
 
-  //Handlers para el SearchBox, así le asignamos el id a la URL
-  const settingSearchValue = (e) => {
+
+  const Search = (e) => {
     e.preventDefault()
-    setSearchValue(e.target.elements[0].value)
+    setValue(e.target.elements[0].value)
   }
 
-  //Side Effect del ID
+
+
   useEffect(() => {
-      setId(searchValue)
-  }, [searchValue])
+      setId(value)
+  }, [value])
 
 
 
@@ -33,7 +34,7 @@ function App() {
 
   return (
     <>
-    <SearchBox Onsubmit={settingSearchValue}/>
+    <SearchBox Onsubmit={Search}/>
     <LocationContainer id={id}/>
     </>
   );
