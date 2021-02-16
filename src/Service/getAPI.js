@@ -1,10 +1,9 @@
 import axios from "axios"
 
-const getAPI = async(id) => {
-const {data} = await axios.get(`https://rickandmortyapi.com/api/location/${id}`)
+const getAPI = async() => {
+const {data} = await axios.get(`https://rickandmortyapi.com/api/location/`)
 return data
 }
 
 export default getAPI
-
 

@@ -6,15 +6,9 @@ import React,{useState, useEffect} from 'react'
 
 function App() {
 
-  const [ id, setId ] = useState();
   const [ value, setValue] = useState();
 
   
-  useEffect(() => {
-    const RandomId = Math.floor(Math.random() * 108)
-    RandomId.toString()
-      setId(RandomId)
-  },[])
 
 
   const Search = (e) => {
@@ -24,18 +18,13 @@ function App() {
 
 
 
-  useEffect(() => {
-      setId(value)
-  }, [value])
-
-
 
 
 
   return (
     <>
     <SearchBox Onsubmit={Search}/>
-    <LocationContainer id={id}/>
+    <LocationContainer value={value}/>
     </>
   );
 }

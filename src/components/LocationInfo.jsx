@@ -2,7 +2,7 @@ import React from 'react'
 
 const LocationInfo = ({name,dimesion,type}) => {
     return (
-        <div>
+        <div className="info-container">
             <p>{name}</p>
             <p>{dimesion}</p>
             <p>{type}</p>
