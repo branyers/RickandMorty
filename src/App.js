@@ -24,10 +24,10 @@ function App() {
 ]
 
   useEffect(() => {
-    const stringThis = Math.floor(Math.random() * planet.length)
+    const RandomIndex = Math.floor(Math.random() * planet.length)
   
     setTimeout(() => {
-      setValue(planet[stringThis])
+      setValue(planet[RandomIndex])
     }, 500)
   },[])
 
